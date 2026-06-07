@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
      public TextMeshProUGUI txt_Score; 
      public TextMeshProUGUI txt_Temporizador;
+     public GameObject panelWin;
+     public GameObject panelGameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -25,4 +27,12 @@ public class UIManager : MonoBehaviour
         }
         txt_Temporizador.text = "Temporizador: " + GameManager.timer.ToString("F2");
     } 
+
+    public void MostrarPantallaWin(){
+        panelWin.SetActive(true);
+    }
+
+    public void MostrarPantallaGameOver(){
+        panelGameOver.SetActive(true);
+    }
 }

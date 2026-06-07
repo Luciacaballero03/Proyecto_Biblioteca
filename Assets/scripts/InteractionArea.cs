@@ -17,6 +17,11 @@ public class InteractionArea : MonoBehaviour
         uiManag.UpdateScore(score);
         Debug.Log("Has recolectado " + score + " discos");
         Destroy(col.gameObject);
+
+    if (score >= 5){
+        uiManag.MostrarPantallaWin();
+        Time.timeScale = 0;
+        }
     }
     }
 }
