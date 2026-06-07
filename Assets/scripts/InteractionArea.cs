@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class InteractionArea : MonoBehaviour
 {
-    public int objetosRecolectados = 0;
+    public int score = 0;
+    UIManager uiManag;
+
+    void Awake() {
+        uiManag = Object.FindObjectOfType<UIManager>();
+    }
 
     void OnTriggerEnter (Collider col) {
     if (col.gameObject.CompareTag ("Coleccionable")){
-        objetosRecolectados++;
-        Debug.Log("Has recolectado " + objetosRecolectados + " discos");
+        score++;
+        uiManag.UpdateScore(score);
+        Debug.Log("Has recolectado " + score + " discos");
         Destroy(col.gameObject);
     }
     }
