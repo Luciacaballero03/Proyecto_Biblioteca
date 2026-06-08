@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static float timer = 60f;
+    public float timer = 60f;
     public UIManager uiManag;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
             timer -= Time.deltaTime;
-            uiManag.UpdateTimer();
+            uiManag.UpdateTimer(timer);
 
              if (timer <= 0){
                 timer = 0;
@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R)){
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+                timer = 0;
+        }
 
     }
 }
