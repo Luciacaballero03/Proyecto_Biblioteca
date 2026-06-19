@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -13,19 +13,19 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateTimer();
+        UpdateTimer(0);
     }
 
     public void UpdateScore (int score) {
         txt_Score.text = "Score: " + score;
         }
 
-    public void UpdateTimer () {
-    if (GameManager.timer < 0)
+    public void UpdateTimer (float timer) {
+    if (timer < 0)
         {
-            GameManager.timer = 0;
+            timer = 0;
         }
-        txt_Temporizador.text = "Temporizador: " + GameManager.timer.ToString("F2");
+        txt_Temporizador.text = timer.ToString("F2");
     } 
 
     public void MostrarPantallaWin(){
