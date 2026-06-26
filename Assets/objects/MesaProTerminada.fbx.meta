@@ -1,20 +1,26 @@
 fileFormatVersion: 2
-guid: b4b2b426b23d62344846870c89574e3f
+guid: 17d68fa5c33aafa48963ffb69b96c3ae
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Pata_Mesa
+    2100002: MADERA_MESApro
     2300000: //RootNode
     3300000: //RootNode
-    4300000: libreria.003
+    4300000: Cube.002
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: ba3502b9f9f3cc44e94fd4afe34e2080, type: 2}
+      name: MADERA_MESApro
+    second: {fileID: 2100000, guid: c717300fc7868054893cce4c7037e407, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pata_Mesa
+    second: {fileID: 2100000, guid: 3017c2e112b39be4b87a9a04bd2dd7bc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
